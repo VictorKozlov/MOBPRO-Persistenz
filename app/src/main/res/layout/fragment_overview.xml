@@ -23,5 +23,22 @@
         android:id="@+id/counterViewElement"
         android:text="MainActivity.onResume wurde seit der Installation dieser App 61 mal aufgerufen."
         android:textSize="14dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/teaPrefereceViewElement"
+        android:text="Ich trinke am liebsten  Lipton/Pfefferminztee, mit Rohrzucker gesüsst"
+        android:textSize="14dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit tea preferences"
+        android:onClick="setTeaPreference"
+        android:id="@+id/setTeaPreferenceButton"></Button>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Set default tea preferences"></Button>
 
 </LinearLayout>

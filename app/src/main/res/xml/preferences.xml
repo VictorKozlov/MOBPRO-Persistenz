@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="Tea Prefs"
+        android:title="">
+        <CheckBoxPreference
+            android:key="teaWithSugar"
+            android:persistent="true"
+            android:summary="Soll der Tee gesüsst werden"
+            android:title="Gesüsster Tee?">
+
+        </CheckBoxPreference>
+        <ListPreference>
+
+        </ListPreference>
+
+        <EditTextPreference>
+
+        </EditTextPreference>
+
+    </PreferenceCategory>
+</PreferenceScreen>

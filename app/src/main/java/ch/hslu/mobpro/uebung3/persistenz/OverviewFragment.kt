@@ -44,4 +44,8 @@ class OverviewFragment : Fragment() {
 
         counterViewElement.text = "MainActivity.onResume wurde seit der Installation dieser App $preferenceCounter mal aufgerufen."
     }
+
+    public fun setTeaPreference(view:View){
+        activity_main.
+    }
 }
