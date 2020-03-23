@@ -20,7 +20,7 @@ class OverviewFragment : Fragment() {
     private val SHARED_PREFERENCES_OVERVIEW: String = "CounterPreference"
     private val COUNTER_KEY = "counterKey"
 
-    override fun onCreateView(
+override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -35,6 +35,7 @@ class OverviewFragment : Fragment() {
 
     override fun onResume() {
         setupCounter()
+        setupPreferences()
 
         super.onResume()
     }
@@ -51,6 +52,13 @@ class OverviewFragment : Fragment() {
         editor.apply()
 
         counterViewElement.text = "MainActivity.onResume wurde seit der Installation dieser App $preferenceCounter mal aufgerufen."
+    }
+
+    private fun setupPreferences(){
+        var prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        var isSweeten = prefs.getBoolean("teaWithSugar", false)
+        var sweetenString : String = if (isSweeten) "mit ${prefs.getString("teaSweetener", null) } gesüsst" else ""
+        teaPrefereceViewElement.text = "Ich trinke am liebsten  ${prefs.getString("teaPreferred", null)},   ${sweetenString}"
     }
 
     public fun setTeaPreference(view : View){

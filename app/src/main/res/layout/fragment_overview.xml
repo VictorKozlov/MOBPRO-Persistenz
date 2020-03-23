@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/counterViewElement"
-        android:text="MainActivity.onResume wurde seit der Installation dieser App 61 mal aufgerufen."
+        android:text="MainActivity.onResume wurde seit der Installation dieser App 0 mal aufgerufen."
         android:textSize="14dp" />
     <TextView
         android:layout_width="wrap_content"
