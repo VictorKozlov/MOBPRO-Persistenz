@@ -29,8 +29,23 @@ override fun onCreateView(
         btnTeaPreference?.setOnClickListener{
             this.parentFragmentManager.beginTransaction()?.replace(R.id.addHereFragmentView, TeaPreferenceFragment()).addToBackStack("overview")?.commit()
         }
-        // Inflate the layout for this fragment
-        return view;
+
+        var btnDefaultTeaPreference = view?.findViewById<Button>(R.id.setDefaultTeaPreferenceButton)
+        btnDefaultTeaPreference?.setOnClickListener{
+            setDefaults()
+            this.parentFragmentManager.beginTransaction()?.replace(R.id.addHereFragmentView, TeaPreferenceFragment()).addToBackStack("overview")?.commit()
+        }
+            // Inflate the layout for this fragment
+            return view;
+        }
+
+    private fun setDefaults() {
+        var prefs = PreferenceManager.getDefaultSharedPreferences(context)
+        var editor = prefs.edit()
+        editor.putBoolean("teaWithSugar", false)
+        editor.putString("teaSweetener", "natural")
+        editor.putString("teaPreferred", "defaultTea")
+        editor.commit()
     }
 
     override fun onResume() {

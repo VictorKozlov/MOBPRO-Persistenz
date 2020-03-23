@@ -34,11 +34,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Edit tea preferences"
-
         android:id="@+id/setTeaPreferenceButton"></Button>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Set default tea preferences"></Button>
+        android:text="Set default tea preferences"
+        android:id="@+id/setDefaultTeaPreferenceButton"></Button>
 
 </LinearLayout>
