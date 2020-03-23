@@ -34,7 +34,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Edit tea preferences"
-        android:onClick="setTeaPreference"
+
         android:id="@+id/setTeaPreferenceButton"></Button>
     <Button
         android:layout_width="fill_parent"

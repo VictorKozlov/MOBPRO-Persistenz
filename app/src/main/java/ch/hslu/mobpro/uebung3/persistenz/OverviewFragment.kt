@@ -6,7 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.fragment_overview.*
+/*import androidx.preference.PreferenceManage*/
 
 /**
  * A simple [Fragment] subclass.
@@ -21,8 +24,13 @@ class OverviewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var view = inflater.inflate(R.layout.fragment_overview, container, false)
+        var btnTeaPreference = view?.findViewById<Button>(R.id.setTeaPreferenceButton)
+        btnTeaPreference?.setOnClickListener{
+            this.parentFragmentManager.beginTransaction()?.replace(R.id.addHereFragmentView, TeaPreferenceFragment()).addToBackStack("overview")?.commit()
+        }
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_overview, container, false)
+        return view;
     }
 
     override fun onResume() {
@@ -45,7 +53,7 @@ class OverviewFragment : Fragment() {
         counterViewElement.text = "MainActivity.onResume wurde seit der Installation dieser App $preferenceCounter mal aufgerufen."
     }
 
-    public fun setTeaPreference(view:View){
-        activity_main.
+    public fun setTeaPreference(view : View){
+        PreferenceManager.getDefaultSharedPreferences(context)
     }
 }
