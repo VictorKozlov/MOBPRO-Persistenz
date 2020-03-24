@@ -50,13 +50,13 @@
         android:textSize="14dp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbt_externDataStorage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Externen Speicher benutzen" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hier wird der status angezeigt" />
@@ -66,10 +66,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Irgendein Text"
-        android:textSize="23dp"/>
+        android:textSize="23dp" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txt_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -84,13 +84,13 @@
             android:id="@+id/btn_save"
             android:layout_width="196dp"
             android:layout_height="wrap_content"
-            android:background=""
+
             android:text="Speichern" />
         <Button
             android:id="@+id/btn_load"
             android:layout_width="214dp"
             android:layout_height="wrap_content"
-            android:background=""
+
             android:text="Laden" />
     </LinearLayout>
 </LinearLayout>
